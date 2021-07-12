@@ -21,13 +21,7 @@ export default function App() {
     setGuessRound(0);
   };
   let content = <StartGameScreen onGameStart={startGameHandler} />;
-  content = (
-    <GameOverScreen
-      gameRounds={1}
-      userNumber={1}
-      onRestart={configureRestartGame}
-    />
-  );
+
   if (userGuess && guessRound <= 0) {
     content = (
       <GameScreen userChoice={userGuess} onGameOver={guessRoundHandler} />
